@@ -1,0 +1,8 @@
+﻿@model IEnumerable<HallOfFame.Models.Positions>
+
+@foreach (var position in Model)
+{
+<h6>@position.Position</h6>
+<p>@position.Company @position.Years </p>
+<p>@position.Duties</p>
+}

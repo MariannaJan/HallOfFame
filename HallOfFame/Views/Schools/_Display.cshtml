@@ -1,0 +1,5 @@
+﻿@model IEnumerable <HallOfFame.Models.Schools>
+ 
+@foreach (var school in Model) {
+<a href=@school.Link>@school.SchoolName</a><p> @school.Years,</p><p> @school.Subject</p>
+}

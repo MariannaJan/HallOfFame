@@ -1,0 +1,45 @@
+﻿@model IEnumerable<HallOfFame.Models.Certificates>
+
+@{
+    ViewBag.Title = "Courses";
+}
+
+<h2>Courses</h2>
+
+<table class="table table-bordered table-hover" id="certificates">
+    <thead>
+        <tr>
+            <th>Course Name</th>
+            <th>Certificate</th>
+            <th>Domain</th>
+            <th>Institution</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var certificate in Model)
+        {
+            <tr>
+                <td>@certificate.name</td>
+                <td>
+                    @if (certificate.CertificateInstitutions.IssuesCertificate)
+                    {
+                        <a href="@certificate.link" class="btn btn-info">View Certificate</a>
+                    }
+                </td>
+                <td>@certificate.Domains.Name</td>
+                <td><a href="@certificate.CertificateInstitutions.Link">@certificate.CertificateInstitutions.Name</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $("#certificates").DataTable();
+        })
+    </script>
+
+}

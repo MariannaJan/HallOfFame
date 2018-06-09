@@ -20,6 +20,14 @@ namespace HallOfFame.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Schools> School { get; set; }
+        public DbSet<Positions> Position { get; set; }
+        public DbSet<CertificateInstitutions> CertificateInstitution { get; set; }
+        public DbSet<Certificates> Certificates { get; set; }
+        public DbSet<Domains> Domains { get; set; }
+        
+   
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
