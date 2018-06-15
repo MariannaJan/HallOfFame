@@ -1,5 +1,19 @@
 ﻿@model IEnumerable <HallOfFame.Models.Schools>
- 
-@foreach (var school in Model) {
-<a href=@school.Link>@school.SchoolName</a><p> @school.Years,</p><p> @school.Subject</p>
-}
+
+<div class="panel panel-success">
+    <div class="panel-heading"><h3 id="edu">Education</h3></div>
+    <div class="panel-body">
+        <p class="text-success">I love to gain new skills and acquire knowledge!</p>
+    </div>
+
+    <table class="table">
+        @foreach (var school in Model)
+        {
+        <tr>
+            <td><a href=@school.Link>@school.SchoolName</a></td>
+            <td> @school.Years</td>
+            <td>@school.Subject</td>
+        </tr>
+        }
+    </table>
+</div>

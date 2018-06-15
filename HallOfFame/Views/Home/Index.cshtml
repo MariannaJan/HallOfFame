@@ -4,20 +4,23 @@
 }
 
 <div class="jumbotron" id="about">
-    @Html.Photo(@"<h2 >About me</h2>
-                <p>I'm a creative person looking at the world as a place full of opportunities. I love learning and acquiring new skills, on many different fields.<br>
+    @Html.Photo(@"<div class='panel panel panel-info'>
+    <div class='panel-heading'>
+        <h3 class='panel-title'><h2 >About me</h2></h3>
+    </div>
+    <div class='panel-body'>
+        I'm a creative person looking at the world as a place full of opportunities. I love learning and acquiring new skills, on many different fields.<br>
                    Through my whole professional life, I've had highly diverse duties, that required lightning fast adaptation and ability to work under pressure.<br>
                    I enjoy good teamwork and I can create a team where there were only single proffessionals.<br>
                    I strongly believe, that there are no unsolvable problems, as long as we can stay calm and act reasonably.
-                </p>")
+    </div>
+</div>")
 </div>
 <div class="container">
     <div>
-        <h2 id="exp">Experience</h2>
         @Html.Action("PosDisplay", "Positions")
     </div>
     <div>
-        <h2 id="edu">Education</h2>
         @Html.Action("Display", "Schools")
     </div>
 </div>

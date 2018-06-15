@@ -3,16 +3,23 @@
 @{
     ViewBag.Title = "Contact";
 }
-<h2>Contact me:</h2>
-
-@Html.Photo(@"<address>
-                Zawaly 25A<br />
-                Dobrzejewice<br />
-                <abbr title='Phone'>P:</abbr>
-                +48 698 767 008
-              </address>
-              Email: janczak.marianna@gmail.com")
-
-
+    
+@Html.Photo(@"<div class='panel panel-success'>
+        <div class='panel-heading'><h2>Contact me:</h2></div>
+            <ul class='list-group'>
+                <li class='list-group-item'>
+                    <address>
+                        Zawaly 25A<br />
+                        87-123 Dobrzejewice<br/>
+                        Poland
+                    </address>
+                </li>
+                <li class='list-group-item'>
+                    <abbr title='Phone'>P:</abbr>+48 698 767 008
+                </li>
+                <li class='list-group-item'>
+                    <span class='text-success'>Email: janczak.marianna@gmail.com</span>
+                </li></ul></div>")
+    
 
 
