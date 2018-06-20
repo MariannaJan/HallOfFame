@@ -29,7 +29,7 @@ namespace HallOfFame
                       "~/Content/bootstrap-cyborg.css",
                       "~/Content/datatables/css/datatables.bootstrap.css",
                       "~/Content/photo.css",
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
         }
     }
 }

@@ -14,6 +14,12 @@ namespace HallOfFame
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Courses",
+                url: "Courses",
+                defaults: new { controller = "Certificates", action = "ShowCertificates", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
