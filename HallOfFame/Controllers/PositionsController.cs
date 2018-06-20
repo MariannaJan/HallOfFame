@@ -26,5 +26,19 @@ namespace HallOfFame.Controllers
             var positions = _context.Position.ToList();
             return PartialView("_PosDisplay", positions);
         }
+
+        public ActionResult AddPosition()
+        {        
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Positions position)
+        {
+            _context.Position.Add(position);
+            _context.SaveChanges();
+
+            return RedirectToAction("AddPosition");
+        }
     }
 }

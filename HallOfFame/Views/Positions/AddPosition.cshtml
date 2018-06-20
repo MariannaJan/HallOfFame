@@ -1,0 +1,27 @@
+﻿@model HallOfFame.Models.Positions
+@{
+    ViewBag.Title = "AddPosition";
+}
+
+<h2>Add Position</h2>
+
+@using (Html.BeginForm("Create", "Positions"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Position)
+        @Html.TextBoxFor(m => m.Position, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Company)
+        @Html.TextBoxFor(m => m.Company, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Years)
+        @Html.TextBoxFor(m => m.Years, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Duties)
+        @Html.TextBoxFor(m => m.Duties, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Add position</button>
+}

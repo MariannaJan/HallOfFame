@@ -270,6 +270,10 @@
     <Compile Include="Migrations\201806081721216_SeedUsers.Designer.cs">
       <DependentUpon>201806081721216_SeedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806170703189_PositionValidators.cs" />
+    <Compile Include="Migrations\201806170703189_PositionValidators.Designer.cs">
+      <DependentUpon>201806170703189_PositionValidators.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CertificateInstitutions.cs" />
@@ -527,6 +531,7 @@
     <Content Include="Views\Certificates\Certificates.cshtml" />
     <Content Include="Views\Admin\AdminPanel.cshtml" />
     <Content Include="Views\Admin\NoEntry.cshtml" />
+    <Content Include="Views\Positions\AddPosition.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -592,6 +597,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806081721216_SeedUsers.resx">
       <DependentUpon>201806081721216_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806170703189_PositionValidators.resx">
+      <DependentUpon>201806170703189_PositionValidators.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
