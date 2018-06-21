@@ -262,3 +262,5 @@ __pycache__/
 
 #remove web config with credentials
 ./HallOfFame/Web.Release.config
+ 
+/HallOfFame/Web.Release.config
